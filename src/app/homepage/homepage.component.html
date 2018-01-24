@@ -1,0 +1,20 @@
+<p>
+ Carousel sample
+ <ngx-carouselin
+  *ngIf="showCarousel"
+  [options]="carouselOptions">
+  <ngx-carouselin-item
+    *ngFor="let item of items; let i = index"
+    [ngClass]="{'selected' : isSelected(i)}">
+    <div class="content">
+      <div class="content__title">
+         {{item.title}}
+      </div>
+      <div class="content__image">
+         {{item.image}}
+      </div>
+    </div>
+  </ngx-carouselin-item>
+</ngx-carouselin>
+
+</p>
